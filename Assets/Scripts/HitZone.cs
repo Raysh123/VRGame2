@@ -13,6 +13,7 @@ public class HitZone : MonoBehaviour
     {
         Debug.Log(other.name);
         if (!other.gameObject.CompareTag("Enemy")) return;
+        other.GetComponent<Enemy>().Explode();
         OnHit?.Invoke();
     }
 }
