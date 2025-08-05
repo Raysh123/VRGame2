@@ -59,7 +59,11 @@ public class Spellbook : MonoBehaviour
     public void CastActiveSpell()
     {
         Debug.Log("Casting active spell");
-        Instantiate(pages[CurrentPage].spellPrefab, rightHand.transform);
+        Instantiate(
+            original: pages[CurrentPage].spellPrefab, 
+            position: rightHand.transform.position + new Vector3(0.1f, 0, 0.25f), 
+            rotation: Camera.main.transform.rotation, 
+            parent: transform.parent);
     }
 }
 
