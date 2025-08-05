@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Shockwave
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 0}
-  spell: 2
+  spellName: 2

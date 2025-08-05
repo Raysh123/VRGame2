@@ -4,5 +4,5 @@ using UnityEngine;
 public class SpellPage : ScriptableObject
 {
     public GameObject spellPrefab;
-    public Spell spell;
+    public Spell spellName;
 }

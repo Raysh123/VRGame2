@@ -42,6 +42,7 @@ public class EnemyManager : MonoBehaviour
             }
         }
 
+        Debug.LogWarning("No available spawn point");
         return null;
     }
     
@@ -57,13 +58,12 @@ public class EnemyManager : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        GameObject enemy = GetPooledEnemy();
-        if (enemy != null)
-        {
-            Transform spawnPointTransform = GetAvailableSpawnPoint();
-            enemy.transform.position = spawnPointTransform.position;
-            enemy.GetComponentInChildren<Enemy>().Target = enemyTarget;
-            enemy.SetActive(true);
-        }
+        GameObject newEnemy = GetPooledEnemy();
+        if (!newEnemy) return;
+        
+        Transform spawnPointTransform = GetAvailableSpawnPoint();
+        newEnemy.transform.position = spawnPointTransform.position;
+        newEnemy.GetComponentInChildren<Enemy>().Target = enemyTarget;
+        newEnemy.SetActive(true);
     }
 }

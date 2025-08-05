@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Slash
   m_EditorClassIdentifier: 
   spellPrefab: {fileID: 0}
-  spell: 1
+  spellName: 1

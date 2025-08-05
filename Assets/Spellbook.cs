@@ -1,14 +1,25 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Spellbook : MonoBehaviour
 {
     [SerializeField] private List<SpellPage> pages;
+    [SerializeField] private TextMeshProUGUI debugSpellNameTMP;
 
     #region Properties
 
-    public Spell CurrentSpell { get; private set; }
+    private Spell _currentSpell;
+    public Spell CurrentSpell
+    {
+        get => _currentSpell;
+        private set
+        {
+            _currentSpell = value;
+            debugSpellNameTMP.text = $"Active Spell: {_currentSpell.ToString()}";
+        }
+    }
     
     private int _currentPage;
     public int CurrentPage
@@ -18,8 +29,7 @@ public class Spellbook : MonoBehaviour
         {
             if (value < 0 || value >= pages.Count) return;
             _currentPage = value;
-            // flip page animation
-            CurrentSpell = pages[_currentPage].spell;
+            CurrentSpell = pages[_currentPage].spellName;
         }
     }
 
@@ -38,6 +48,11 @@ public class Spellbook : MonoBehaviour
     }
 
     #endregion
+
+    private void Start()
+    {
+        CurrentPage = 0;
+    }
 }
 
 public enum Spell
