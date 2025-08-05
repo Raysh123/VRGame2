@@ -7,6 +7,7 @@ public class Spellbook : MonoBehaviour
 {
     [SerializeField] private List<SpellPage> pages;
     [SerializeField] private TextMeshProUGUI debugSpellNameTMP;
+    [SerializeField] private GameObject rightHand;
 
     #region Properties
 
@@ -52,6 +53,13 @@ public class Spellbook : MonoBehaviour
     private void Start()
     {
         CurrentPage = 0;
+    }
+
+    // make private and use event subscription instead
+    public void CastActiveSpell()
+    {
+        Debug.Log("Casting active spell");
+        Instantiate(pages[CurrentPage].spellPrefab, rightHand.transform);
     }
 }
 

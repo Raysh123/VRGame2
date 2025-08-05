@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd0a3fe5f205c748a4ed9bdc0c4e55b, type: 3}
   m_Name: Slash
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 0}
+  spellPrefab: {fileID: 2227747034238698912, guid: 64eeecb729f908749acea8e74e6fa76e, type: 3}
   spellName: 1

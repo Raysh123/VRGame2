@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd0a3fe5f205c748a4ed9bdc0c4e55b, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  spellPrefab: {fileID: 0}
-  spell: 0
+  spellPrefab: {fileID: 829687178730506956, guid: 0bc9910d3b2689e4991d6d9666adb674, type: 3}
+  spellName: 0

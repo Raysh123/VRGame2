@@ -22,5 +22,9 @@ public class DebugKeyboardControls : MonoBehaviour
             Debug.Log("pressed RightArrow");
             spellbook.CurrentPage++;
         }
+        else if (Input.GetKeyUp(KeyCode.G))
+        {
+            spellbook.CastActiveSpell();
+        }
     }
 }
