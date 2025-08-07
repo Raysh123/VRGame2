@@ -1,13 +1,19 @@
 using System;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private bool canMove = true;
+    
     public Transform Target { private get; set; }
 
     private void Update()
     {
         transform.Rotate(20 * Time.deltaTime, 40 * Time.deltaTime, 30 * Time.deltaTime);
+        
+        if (!canMove) return;
+        
         transform.parent.position = Vector3.Lerp(
             transform.parent.position, 
             Target.position, 

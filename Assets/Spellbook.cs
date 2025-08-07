@@ -62,7 +62,7 @@ public class Spellbook : MonoBehaviour
         Instantiate(
             original: pages[CurrentPage].spellPrefab, 
             position: rightHand.transform.position + new Vector3(0.1f, 0, 0.25f), 
-            rotation: Camera.main.transform.rotation, 
+            rotation: rightHand.transform.rotation, 
             parent: transform.parent);
     }
 }

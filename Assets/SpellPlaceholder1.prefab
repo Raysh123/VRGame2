@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3891857934934601674}
   - component: {fileID: 405229355265531130}
   - component: {fileID: 4524152502979382551}
-  - component: {fileID: -8756622262658455820}
   - component: {fileID: 7582085241844730712}
+  - component: {fileID: -6883718441354257262}
   m_Layer: 0
   m_Name: SpellPlaceholder1
   m_TagString: Untagged
@@ -104,24 +104,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-8756622262658455820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829687178730506956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb4a0f4fad6743342bd668460643b43b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &7582085241844730712
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,3 +137,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6883718441354257262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 829687178730506956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4a0f4fad6743342bd668460643b43b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
