@@ -5,4 +5,5 @@ public class SpellPage : ScriptableObject
 {
     public GameObject spellPrefab;
     public Spell spellName;
+    public float rechargeTime = 1f;
 }
