@@ -26,5 +26,10 @@ public class Enemy : MonoBehaviour
         Invoke(nameof(Deactivate), 0.5f);
     }
 
-    private void Deactivate() => gameObject.transform.parent.gameObject.SetActive(false);
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
+        if (transform.parent.childCount > 0) return;
+        gameObject.transform.parent.gameObject.SetActive(false);
+    }
 }

@@ -8,6 +8,7 @@ public class Spellbook : MonoBehaviour
     [SerializeField] private List<SpellPage> pages;
     [SerializeField] private TextMeshProUGUI debugSpellNameTMP;
     [SerializeField] private GameObject rightHand;
+    [SerializeField] Animator spellbookAnimator;
 
     #region Properties
 
@@ -29,6 +30,10 @@ public class Spellbook : MonoBehaviour
         set
         {
             if (value < 0 || value >= pages.Count) return;
+            
+            // TODO: string lookup SUCKS, hash this or something
+            spellbookAnimator.Play(value > _currentPage ? "FlipForward" : "FlipBackward");
+            
             _currentPage = value;
             CurrentSpell = pages[_currentPage].spellName;
         }
@@ -52,7 +57,8 @@ public class Spellbook : MonoBehaviour
 
     private void Start()
     {
-        CurrentPage = 0;
+        _currentPage = 0;
+        CurrentSpell = pages[_currentPage].spellName;
     }
 
     // make private and use event subscription instead
