@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class SlashProjectile : MonoBehaviour, IProjectile
 {
+    // on press trigger, 
+    // set start point,
+    // on release,
+    // set end point
+    // and send an arching projectile that destroys all enemies it touches without destroying itself
+    
     private Rigidbody _rigidbody;
 
     MeshRenderer _meshRenderer;
@@ -26,7 +32,6 @@ public class SlashProjectile : MonoBehaviour, IProjectile
     {
         if (!other.gameObject.CompareTag("Enemy")) return;
         other.gameObject.GetComponent<Enemy>().Explode();
-        Explode();
     }
 
     public void Explode()
